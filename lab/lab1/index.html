@@ -7,18 +7,32 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/leaflet.css" />
     <!-- Choose a frontend framework CSS file: -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <!-- <link rel="stylesheet" href="css/material.css" /> -->
     <!-- <link rel="stylesheet" href="css/assembly.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Sidebar -->
+    <div class="leftsidebar"></div>
     <div class="sidebar">
       <nav class="navbar navbar-default">
         <div class="container-fluid clearfix">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Dropdown
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
           <div class="topright-button" style="float: right">
-            [Add New]
+
           </div>
           <div class="navbar-header">
             <a href="#">Manufacturers</a>
@@ -60,7 +74,7 @@
     <script src="js/jquery-2.2.0.js"></script>
     <script src="js/leaflet.js"></script>
     <!-- Choose a frontend framework Javascript file: -->
-    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="js/bootstrap.js"></script>
     <!-- <script src="js/material.js"></script> -->
     <!-- <script src="js/assembly.js"></script>  -->
     <script src="js/setup.js"></script>

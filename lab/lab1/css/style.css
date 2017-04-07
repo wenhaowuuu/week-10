@@ -23,6 +23,20 @@ body {
   padding-bottom: 60px;
 }
 
+.btn-group{
+  position:absolute;
+  top:20px;
+  left:10px;
+  font:Helvetica;
+}
+.alert {
+  position: relative;
+  padding:10px;
+  left: 0;
+  top: 70;
+  background-color: #ffff00;
+
+}
 .sidebar {
     position: absolute;
     left: 340px;

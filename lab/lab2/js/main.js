@@ -29,13 +29,32 @@ var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolab
 // GeoJSON. From there, you can either import the GeoJSON to Carto or use Leaflet's L.geoJson.
 
 var cartoUserName = 'wenhaowuuu';
-var cartoVizId = '1f7c9af2-1088-11e7-9c60-0e05a8b3e3d7';
+var cartoVizId1 = 'f08cfabc-1ba8-11e7-a4f7-0e3a376473ab';
+var cartoVizId2 = '71b41866-1bac-11e7-83a3-0ecd1babdde5';
 
-var layerUrl = 'https://'+cartoUserName+'.carto.com/api/v2/viz/'+cartoVizId+'/viz.json';
+var layerUrl1 = 'https://'+cartoUserName+'.carto.com/api/v2/viz/'+cartoVizId1+'/viz.json';
+console.log('historic site added');
 
-cartodb.createLayer(map, layerUrl)
-  .on('done', function(layer) {
-    layer.addTo(map);
+var layerUrl2 = 'https://'+cartoUserName+'.carto.com/api/v2/viz/'+cartoVizId2+'/viz.json';
+console.log('crime spots added');
+
+cartodb.createLayer(map, layerUrl1)
+  .on('done', function(layer1) {
+    layer1.addTo(map);
+    console.log('added');
   }).on('error', function(err) {
     console.log(err);
   });
+
+cartodb.createLayer(map, layerUrl2)
+  .on('done', function(layer2) {
+    layer2.addTo(map);
+    console.log('added');
+  }).on('error', function(err) {
+    console.log(err);
+  });
+
+  L.geoJSON().addTo(map);
+//
+// console.log(philadelphia_crime_points_geojson.geojson);
+// L.geoJSON(philadelphia_crime_points_geojson).addTo(map);
